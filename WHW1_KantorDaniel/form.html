@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
+
+</head>
+
+<body style="display: column; justify-content: align; align-items: center">
+
+    <form action="#" style="font-size: 20px; color: white; height: 63vh; width: 30vw; background-color: #816222; padding: 20px">
+
+        <h1 style="font-size: 30px">Programming Survey</h1>
+
+        <label>First Name:</label><br>
+        <input type="text">
+
+        <br><br>
+
+        <label>Last Name:</label><br>
+        <input type="text">
+
+        <br><br>
+        
+
+        <div>
+
+            <label>Select your favorite Programming Language:</label><br>
+            <button onclick="dropDownMenu()" style="display: flex; justify-content: center; align-items: center; width: 100px; height: 20px">Language:<span class="material-symbols-outlined">keyboard_arrow_down</span></button>
+
+            <div class="languageOptions" style="display: none; background-color: white; color: black; padding: 5px; width: 100px">
+                <a href="#" onclick="selectLanguage('Python')" style="color: black; text-decoration: none;">Python</a><br>
+                <a href="#" onclick="selectLanguage('C++')" style="color: black; text-decoration: none;">C++</a><br>
+                <a href="#" onclick="selectLanguage('HTML')" style="color: black; text-decoration: none;">HTML</a><br>
+                <a href="#" onclick="selectLanguage('CSS')" style="color: black; text-decoration: none;">CSS</a><br>
+                <a href="#" onclick="selectLanguage('JavaScript')" style="color: black; text-decoration: none;">JavaScript</a><br>
+                <a href="#" onclick="selectLanguage('SQL')" style="color: black; text-decoration: none;">SQL</a>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <fieldset style="border: 1px solid white; padding: 15px;">
+
+            <legend style="font-size: 20px; color: white;">Years of Programming Experience</legend>
+
+            <label>
+                <input type="radio" name="experience"> 0-2 years
+            </label><br>
+            <label>
+                <input type="radio" name="experience"> 3-5 years
+            </label><br>
+            <label>
+                <input type="radio" name="experience"> 6-10 years
+            </label><br>
+            <label>
+                <input type="radio" name="experience"> 10+ years
+            </label>
+
+        </fieldset>
+
+        <br>
+
+        <div>
+            <label>
+                <textarea type="text" placeholder="Enter your comment here..." style="width: 350px; height: 175px; border-radius: 10px; border: 1px solid; background-color: rgb(255, 148, 166);"></textarea>
+            </label>
+
+            <br>
+
+            <label>
+                <button id="submitButton" type="button" href="form.html" style="width: 70px; padding: 5px; background-color: yellow; border: 1px solid black; margin-top: 5px; cursor: pointer;">Submit</button>
+            </label>
+            <label>
+                <button id="resetButton" type="button" href="form.html" style="width: 70px; padding: 5px; background-color: yellow; border: 1px solid black; cursor: pointer;">Reset</button>
+            </label>
+        </div>
+
+    </form>
+
+    <ul style="list-style-type: none; display: flex; gap: 15px; font-size: 18px; margin-left: 70px;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="table.html">Table</a></li>
+        <li><a href="form.html">Form</a></li>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+    </ul>
+    <p style="margin-left: 180px"><a href="mailto:kantord3552@student.faytechcc.edu">Contact Us!</a></p>
+
+    <script>
+        
+        function dropDownMenu() {
+            var options = document.querySelector('.languageOptions');
+            options.style.display = (options.style.display == 'none') ? 'block' : 'none';
+        }
+
+        function selectLanguage(language) {
+            var button = document.querySelector('button');
+            button.innerHTML = language + '<span class="material-symbols-outlined">keyboard_arrow_down</span>';
+            dropDownMenu();
+        }
+
+        document.getElementById('resetButton').onclick = function() {
+            location.reload();
+        }
+
+        document.getElementById('submitButton').onclick = function() {
+            location.reload();
+        }
+
+    </script>
+    
+</body>
+</html>
