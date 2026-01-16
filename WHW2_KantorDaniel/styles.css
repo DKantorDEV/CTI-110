@@ -1,0 +1,101 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+    position: relative;
+    height: auto;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 175vh;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 175vh;
+    background: rgba(0,0,0,0.5);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.navigationBar {
+    position: relative;
+    z-index: 3;
+}
+
+.navigationUL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigationUL li {
+    margin-top: 20px;
+}
+
+.navigationUL li a {
+    font-size: 32px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.productsTable {
+    top: 150px;
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.productsTable h2 {
+    font-size: 50px;
+}
+
+.productsTable tr {
+    content: "";
+    background: rgba(0,0,0, 0.65);
+}
+
+.productsTable th {
+    padding: 20px;
+    font-size: 26px;
+}
+
+.productsTable table {
+    max-width: 70vw;
+    text-align: center;
+}
+
+.productsTable td {
+    padding: 10px;
+}
+
+.bottomTableH1 {
+    margin-top: 450px;
+    font-size: 70px;
+}
