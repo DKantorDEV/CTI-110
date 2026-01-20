@@ -6,6 +6,8 @@
     <title>Contact Us</title>
 
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
     
 </head>
 <body>
@@ -17,12 +19,117 @@
     <nav class="navigationBar">
         <ul class="navigationUL">
             <li><a href="Home.html">Home</a></li>
-            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="Contact.html">Quick Contact</a></li>
             <li><a href="Products.html">Product</a></li>
         </ul>
     </nav>
 
+/* Test */ 
 
+    <form action="#" class="formSheet">
+
+            <h1 style="font-size: 40px">Contact Us Here!</h1>
+
+            <div class="nameInfo">
+                <label>First Name:</label>
+                <input type="text">
+                <label>Last Name:</label>
+                <input type="text">
+            </div>
+
+            <br><br>
+
+            <div>
+
+                <label>Reason for Contacting Us:</label><br>
+                <button onclick="dropDownMenu()" style="display: flex; justify-content: center; align-items: center; width: 150px; height: 35px; font-size: 16px;">Choose:<span class="material-symbols-outlined">keyboard_arrow_down</span></button>
+
+                <div class="reasonOptions" style="display: none; background-color: white; color: black; padding: 5px; width: 100px">
+                    <a href="#" onclick="selectLanguage('Complaint')" style="color: black; text-decoration: none;">Complaint</a><br>
+                    <a href="#" onclick="selectLanguage('General')" style="color: black; text-decoration: none;">General</a><br>
+                    <a href="#" onclick="selectLanguage('Jobs')" style="color: black; text-decoration: none;">Jobs</a><br>
+                    <a href="#" onclick="selectLanguage('Product Issue')" style="color: black; text-decoration: none;">Product Issue</a><br>
+                    <a href="#" onclick="selectLanguage('Refund Request')" style="color: black; text-decoration: none;">Refund Request</a><br>
+                    <a href="#" onclick="selectLanguage('Other')" style="color: black; text-decoration: none;">Other</a>
+                </div>
+
+            </div>
+
+            <br><br>
+
+            <fieldset style="border: 1px solid white; padding: 15px;">
+
+                <legend style="font-size: 36px; color: white;">Rate Your Experience with Us!</legend>
+
+                <label>
+                    <input type="radio" name="experience"> Very Positive
+                </label><br>
+                <label>
+                    <input type="radio" name="experience"> Positive
+                </label><br>
+                <label>
+                    <input type="radio" name="experience"> Mixed
+                </label><br>
+                <label>
+                    <input type="radio" name="experience"> Negative
+                </label><br>
+                <label>
+                    <input type="radio" name="experience"> Very Negative
+                </label>
+
+            </fieldset>
+
+            <br>
+
+            <div>
+                <label>
+                    <textarea type="text" placeholder="Enter your comment here..." style="width: 500px; height: 175px; border-radius: 10px; border: 1px solid; background-color: rgb(31, 145, 190);"></textarea>
+                </label>
+
+                <br>
+
+                <label>
+                    <button id="submitButton" type="button" href="form.html" style="width: 70px; padding: 5px; background-color: rgb(126, 193, 39); border: 1px solid black; margin-top: 5px; cursor: pointer;">Submit</button>
+                </label>
+                <label>
+                    <button id="resetButton" type="button" href="form.html" style="width: 70px; padding: 5px; background-color: rgb(126, 193, 39); border: 1px solid black; cursor: pointer;">Reset</button>
+                </label>
+            </div>
+
+        </form>
+
+        <ul style="list-style-type: none; display: flex; gap: 15px; font-size: 18px; margin-left: 70px;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        </ul>
+        <p style="margin-left: 180px"><a href="mailto:kantord3552@student.faytechcc.edu">Contact Us!</a></p>
+
+        <script>
+            
+            function dropDownMenu() {
+                var options = document.querySelector('.reasonOptions');
+                options.style.display = (options.style.display == 'none') ? 'block' : 'none';
+            }
+
+            function selectLanguage(language) {
+                var button = document.querySelector('button');
+                button.innerHTML = language + '<span class="material-symbols-outlined">keyboard_arrow_down</span>';
+                dropDownMenu();
+            }
+
+            document.getElementById('resetButton').onclick = function() {
+                location.reload();
+            }
+
+            document.getElementById('submitButton').onclick = function() {
+                location.reload();
+            }
+
+        </script>
+
+/* End of Test */
 
 
 </body>

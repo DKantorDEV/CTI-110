@@ -20,7 +20,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 175vh;
+    height: 100vh;
 }
 
 .image-container::before {
@@ -29,8 +29,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 175vh;
-    background: rgba(0,0,0,0.5);
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
     pointer-events: none;
     z-index: 2;
 }
@@ -98,4 +98,77 @@ body {
 .bottomTableH1 {
     margin-top: 450px;
     font-size: 70px;
+}
+
+.contact-info {
+    top: 200px;
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mail-link {
+    color: white;
+}
+
+.aboutUs {
+    top: 550px;
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aboutUs p {
+    width: 1200px;
+    text-align: center;
+
+}
+
+.hrDivider {
+    width: 900px;
+}
+
+.videoOfCompany {
+    top: 750px;
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formSheet {
+    top: 450px;
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(89, 19, 89);
+    width: 800px;
+    height: auto;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+.nameInfo {
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
 }
