@@ -5,34 +5,17 @@ html, body {
 }
 
 body {
+    min-height: 100vh;
+    background-image: url('Images/BackgroundImg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.image-container {
-    position: relative;
-    height: auto;
-}
-
-.image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-}
-
-.image-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0,0,0,0.7);
-    pointer-events: none;
-    z-index: 2;
 }
 
 .navigationBar {
