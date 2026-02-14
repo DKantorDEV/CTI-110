@@ -1,5 +1,5 @@
 # Daniel Kantor
-# January 28, 2026
+# February 14, 2026
 # P2HW1
 # This python code will do mathmatical sequences to calculate whatever numbers we want it to.
 
